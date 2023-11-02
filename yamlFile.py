@@ -9,7 +9,7 @@ except ImportError:
 
 
 if __name__ == '__main__':
-    stream = open('test.yaml', 'r')
-    dictionary = yaml.load(stream, Loader=Loader)
-    for key, value in dictionary.items():
-        print(key, value)
+    with open('test.yaml', 'r') as stream:
+        dictionary = yaml.load(stream, Loader=Loader)
+        for key, value in dictionary.items():
+            print(key, value)
